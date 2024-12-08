@@ -1,0 +1,7 @@
+.app-home {
+    background-color: rgba(213, 194, 143, 0.5);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

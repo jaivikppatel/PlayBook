@@ -1,0 +1,24 @@
+.app-header {
+    background-color: #14083d;
+    color: #c7ae6a;
+    padding: 0 7px;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 100; 
+    justify-content: space-between;
+}
+
+.drawer-content {
+    display: flex;
+    width: 200px;
+    background-color: #14083d;
+    color: #b99a45;
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.css-4bx69l-MuiButtonBase-root-MuiListItemButton-root {
+    height: 40px;
+}

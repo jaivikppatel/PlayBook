@@ -1,0 +1,113 @@
+.ranking-table-root {
+    margin-top: 80px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.podium-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.podium-1 {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: goldenrod;
+    height: 250px;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.podium-2 {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: silver;
+    height: 200px;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.podium-3 {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cd7f32;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.podium-image {
+    height: 50%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+}
+
+.podium-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #14083d;
+    margin-top: 10px;
+}
+
+.podium-points {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #14083d;
+    margin-top: 5px;
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.rank {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #14083d;
+}
+
+.team-image {
+    width: 60px;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    margin: 0 10px;
+}
+
+.team-name {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #14083d;
+}
+
+.team-points {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #14083d;
+}

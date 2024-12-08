@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PlayBook/static/css/main.929c1a1e.css",
+    "main.js": "/PlayBook/static/js/main.4f9619c7.js",
+    "index.html": "/PlayBook/index.html",
+    "main.929c1a1e.css.map": "/PlayBook/static/css/main.929c1a1e.css.map",
+    "main.4f9619c7.js.map": "/PlayBook/static/js/main.4f9619c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.929c1a1e.css",
+    "static/js/main.4f9619c7.js"
+  ]
+}

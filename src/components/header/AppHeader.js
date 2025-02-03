@@ -2,9 +2,11 @@ import React from 'react';
 import './AppHeader.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Drawer, IconButton, List, ListItemButton } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const AppHeader = () => {
     const [drawerOpen, setDrawerOpen] = React.useState(false);
+    const navigate = useNavigate();
 
     return (
         <div className="app-header">
@@ -13,11 +15,10 @@ const AppHeader = () => {
             <Drawer anchor='right' open={drawerOpen} onClose={() => setDrawerOpen(false)}>
                 <div className='drawer-content'>
                     <List sx={{ width: '100%' }}>
-                        <ListItemButton>Home</ListItemButton>
-                        <ListItemButton>Add Scores</ListItemButton>
-                        <ListItemButton>Manage Teams</ListItemButton>
-                        <ListItemButton>Manage Players</ListItemButton>
-                        <ListItemButton>Manage Games</ListItemButton>
+                        <ListItemButton onClick={() => navigate('/')}>Home</ListItemButton>
+                        <ListItemButton onClick={() => navigate('/scores')}>Add Scores</ListItemButton>
+                        <ListItemButton onClick={() => navigate('/players')}>Manage Players</ListItemButton>
+                        <ListItemButton onClick={() => navigate('/games')}>Manage Games</ListItemButton>
                     </List>
                 </div>
             </Drawer>

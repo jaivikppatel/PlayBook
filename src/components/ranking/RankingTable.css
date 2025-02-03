@@ -24,6 +24,7 @@
     height: 250px;
     border-radius: 10px;
     padding: 10px 0;
+    box-shadow: #14083d 0px 0px 10px;
 }
 
 .podium-2 {
@@ -35,6 +36,7 @@
     height: 200px;
     border-radius: 10px;
     padding: 10px 0;
+    box-shadow: #14083d 0px 0px 10px;
 }
 
 .podium-3 {
@@ -42,10 +44,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #cd7f32;
+    background-color: #b08d57;
     height: 150px;
     border-radius: 10px;
     padding: 10px 0;
+    box-shadow: #14083d 0px 0px 10px;
 }
 
 .podium-image {
@@ -73,7 +76,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
 }
 
 .rank {
@@ -83,7 +86,7 @@
     align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #14083d;
+    color: #c7ae6a;
 }
 
 .team-image {
@@ -99,7 +102,7 @@
     align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #14083d;
+    color: #c7ae6a;
 }
 
 .team-points {
@@ -109,5 +112,5 @@
     align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #14083d;
+    color: #c7ae6a;
 }

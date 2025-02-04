@@ -1,17 +1,16 @@
-
 import React from 'react';
 import { 
-    BrowserRouter as Router,
+    HashRouter as Router, // Use HashRouter here
     Routes,
     Route
- } from 'react-router-dom';
+} from 'react-router-dom';
 import Home from './pages/home/Home';
 import Players from './pages/players/Players';
 import Games from './pages/games/Games';
 import Scores from './pages/scores/Scores';
 import Login from './pages/login/Login';
 
-const RouteContainer = (props) => {
+const RouteContainer = () => {
   return (
     <Router>
       <Routes>

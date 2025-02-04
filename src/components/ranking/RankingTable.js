@@ -442,18 +442,18 @@ export default function RankingTable() {
     return (<>
         {rankedData.length > 0 && <div className='ranking-table-root'>
             <div className='podium-container'>
-                <div className='podium-2'>
-                    <img src={rankedData[1].profile_image} alt='team' className='podium-image' />
+                {rankedData.length > 0 && <div className='podium-2'>
+                    <img src={rankedData[1].profile_image} alt={`${rankedData[1].name} logo`} className='podium-image' />
                     <div className='podium-name'>{rankedData[1].name}</div>
                     <div className='podium-points'>{rankedData[1].points}</div>
-                </div>
-                {rankedData.length > 1 && <div className='podium-1'>
-                    <img src={rankedData[0].profile_image} alt='team' className='podium-image' />
+                </div>}
+                {rankedData.length > 0 && <div className='podium-1'>
+                    <img src={rankedData[0].profile_image} alt={`${rankedData[0].name} logo`} className='podium-image' />
                     <div className='podium-name'>{rankedData[0].name}</div>
                     <div className='podium-points'>{rankedData[0].points}</div>
                 </div>}
                 {rankedData.length > 2 && <div className='podium-3'>
-                    <img src={rankedData[2].profile_image} alt='team' className='podium-image' />
+                    <img src={rankedData[2].profile_image} alt={`${rankedData[2].name} logo`} className='podium-image' />
                     <div className='podium-name'>{rankedData[2].name}</div>
                     <div className='podium-points'>{rankedData[2].points}</div>
                 </div>}
@@ -469,7 +469,7 @@ export default function RankingTable() {
                         <AccordionSummary>
                             {/** Rank and team name and image in summary */}
                             <div className='rank'>{index + 4}</div>
-                            <img src={team.profile_image} alt='team' className='team-image' />
+                            <img src={team.profile_image} alt={`${team.name} logo`} className='team-image' />
                             <div className='team-name'>{team.name}</div>
                             <div className='team-points'>{team.points}</div>
                         </AccordionSummary>

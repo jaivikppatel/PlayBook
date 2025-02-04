@@ -35,7 +35,7 @@ export default function Login() {
                 sessionStorage.setItem('admin', data.admin);
                 sessionStorage.setItem('name', data.name);
                 sessionStorage.setItem('logo', data.logo);
-                window.location.reload();
+                window.location.href = '/';
             }
         })
         .catch(error => console.error(error));
@@ -46,7 +46,7 @@ export default function Login() {
         fetch(`${sessionStorage.getItem('apiUrl')}/create_account`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ cred_code, id: selectedTeamId })
+            body: JSON.stringify({ cred_code, id: selectedTeamId, creation_code: createCode})
         })
         .then(response => response.json())
         .then(data => {
@@ -58,7 +58,7 @@ export default function Login() {
                 sessionStorage.setItem('admin', data.admin);
                 sessionStorage.setItem('name', data.name);
                 sessionStorage.setItem('logo', data.logo);
-                window.location.reload();
+                window.location.href = '/';
             }
         })
         .catch(error => console.error(error));
@@ -100,6 +100,7 @@ export default function Login() {
                 <option value="">Select a Team</option>
                 {teamList.map(team => <option key={team.id} value={team.id}>{team.name}</option>)}
             </Select>
+
 
             <TextField label="Username" value={createUsername} onChange={e => setCreateUsername(e.target.value)} />
             <TextField label="Password" type="password" value={createPassword} onChange={e => setCreatePassword(e.target.value)} />

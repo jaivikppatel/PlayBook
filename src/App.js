@@ -5,7 +5,8 @@ import RouteContainer from './RouteContainer';
 
 function App() {
 	useEffect(() => {
-		sessionStorage.setItem('apiUrl', 'https://playbook-server-08d8a72fc897.herokuapp.com');
+		// sessionStorage.setItem('apiUrl', 'https://playbook-server-08d8a72fc897.herokuapp.com');
+		sessionStorage.setItem('apiUrl', 'http://localhost:5000');
 	}, []);
 
 	return (

@@ -109,7 +109,7 @@ const Games = () => {
             ))}
 
             {/** Add a button with matching theme to add a new player */}
-            <IconButton onClick={() => handleAddClick()} sx={{ width: '50px', height: '50px', backgroundColor: '#b99a45', border: '2px solid #14083d', mt: '20px' }}><AddIcon sx={{ color: '#14083d' }} /></IconButton>
+            <IconButton onClick={() => handleAddClick()} sx={{ width: '50px', height: '50px', backgroundColor: '#b99a45', border: '2px solid #14083d', mt: '20px', mb: '20px' }}><AddIcon sx={{ color: '#14083d' }} /></IconButton>
 
             <Dialog open={open} onClose={() => setOpen(false)}>
                 <div className='dialog-content'>

@@ -77,7 +77,7 @@ const Scores = () => {
             >
                 <option value="">Select a Game</option>
                 {games.map(game => (
-                    <option key={game.id} value={game.id}>{game.name}</option>
+                    <option key={game.id} value={game.id}>{game.match_number} - {game.name}</option>
                 ))}
             </Select>
 
@@ -100,7 +100,7 @@ const Scores = () => {
             ))}
             <Button
                 variant="contained"
-                style={{marginTop: '20px'}}
+                style={{marginTop: '20px', marginBottom: '20px'}}
                 onClick={() => saveScores()}
             >
                 Save Scores

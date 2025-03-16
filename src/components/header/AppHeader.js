@@ -3,6 +3,7 @@ import './AppHeader.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Avatar, Drawer, IconButton, List, ListItemButton, Tooltip, Menu, Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import RefreshIcon from '@mui/icons-material/Refresh';
 
 const AppHeader = () => {
     const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -18,7 +19,10 @@ const AppHeader = () => {
         sessionStorage.removeItem('cred_code');
         sessionStorage.removeItem('name');
         sessionStorage.removeItem('admin');
-        navigate('/login');
+        navigate('/');
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000);
     }
 
     const handleMenu = (event) => {
@@ -62,14 +66,25 @@ const AppHeader = () => {
         .catch(error => console.error(error));
     };
 
+    function refresh(){
+        window.location.reload();
+    }
+
     return (
         <div className="app-header">
             <img style={{ width: '120px' }} src={`${process.env.PUBLIC_URL}/playbook-logo.png`} alt="logo" />
+
+            <div style={{ display: 'flex', flexDirection: 'row'}}> 
+            <IconButton >
+                <RefreshIcon onClick={() => refresh()} sx={{color:'#c7ae6a'}}/>
+            </IconButton>
+            
             {sessionStorage.getItem('admin') === 'true' ? <IconButton onClick={() => setDrawerOpen(true)} size='large'><MenuIcon sx={{ color: '#c7ae6a' }} /></IconButton> :
                 <>{sessionStorage.getItem('cred_code') && <Tooltip title={sessionStorage.getItem('name')} arrow>
-                    <Avatar onClick={(event) => handleMenu(event)} sx={{ bgcolor: '#c7ae6a', mr: '9px' }}>{sessionStorage.getItem('name')?.charAt(0).toUpperCase()}</Avatar>
+                    <img src={sessionStorage.getItem('logo')} alt='logo' onClick={(event) => handleMenu(event)} style={{ width: '60px', height: 'fit-content' }} />
                 </Tooltip>}</>
             }
+            </div>
             <Drawer anchor='right' open={drawerOpen} onClose={() => setDrawerOpen(false)}>
                 <div className='drawer-content'>
                     <List sx={{ width: '100%' }}>
@@ -93,7 +108,7 @@ const AppHeader = () => {
                 <DialogTitle>Change Name/Logo</DialogTitle>
                 <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                     <TextField label="Name" value={name} onChange={e => setName(e.target.value)} />
-                    <TextField label="Logo" value={logo} onChange={e => setLogo(e.target.value)} />
+                    <TextField disabled label="Logo" value={logo} onChange={e => setLogo(e.target.value)} />
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleDialogClose}>Cancel</Button>

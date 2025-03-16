@@ -442,7 +442,7 @@ export default function RankingTable() {
     return (<>
         {rankedData.length > 0 && <div className='ranking-table-root'>
             <div className='podium-container'>
-                {rankedData.length > 0 && <div className='podium-2'>
+                {rankedData.length > 1 && <div className='podium-2'>
                     <img src={rankedData[1].profile_image} alt={`${rankedData[1].name} logo`} className='podium-image' />
                     <div className='podium-name'>{rankedData[1].name}</div>
                     <div className='podium-points'>{rankedData[1].points}</div>
@@ -478,14 +478,16 @@ export default function RankingTable() {
                             <Table>
                                 <TableHead>
                                     <TableRow>
-                                        <TableCell sx={{ color: '#c7ae6a' }}>Match Number</TableCell>
-                                        <TableCell sx={{ color: '#c7ae6a' }}>Rank</TableCell>
+                                        <TableCell sx={{ color: '#c7ae6a', fontWeight:'bold' }}>Match Number</TableCell>
+                                        <TableCell sx={{ color: '#c7ae6a', fontWeight:'bold' }}>Match Name</TableCell>
+                                        <TableCell sx={{ color: '#c7ae6a', fontWeight:'bold' }}>Rank</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
                                     {team.rank_history.map((history) => (
                                         <TableRow key={history.match_number}>
                                             <TableCell sx={{ color: '#c7ae6a' }}>{history.match_number}</TableCell>
+                                            <TableCell sx={{ color: '#c7ae6a' }}>{history.match_name}</TableCell>
                                             <TableCell sx={{ color: '#c7ae6a' }}>{history.rank}</TableCell>
                                         </TableRow>
                                     ))}

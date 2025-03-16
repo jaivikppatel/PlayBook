@@ -35,7 +35,7 @@ export default function Login() {
                 sessionStorage.setItem('admin', data.admin);
                 sessionStorage.setItem('name', data.name);
                 sessionStorage.setItem('logo', data.logo);
-                window.location.href = '/';
+                window.location.reload();
             }
         })
         .catch(error => console.error(error));
@@ -58,7 +58,7 @@ export default function Login() {
                 sessionStorage.setItem('admin', data.admin);
                 sessionStorage.setItem('name', data.name);
                 sessionStorage.setItem('logo', data.logo);
-                window.location.href = '/';
+                window.location.reload();
             }
         })
         .catch(error => console.error(error));
@@ -88,7 +88,7 @@ export default function Login() {
     return (<>
         {createAccount && <div className='app-home' style={{ gap: '20px' }}>
             <AppHeader />
-            <h1 style={{marginTop: '80px', color: '#14083d'}}>Create Account</h1>
+            <h1 style={{marginTop: '80px', color: '#14083d'}}>Claim Account</h1>
             
             <Select 
                 value={selectedTeamId}
@@ -110,7 +110,10 @@ export default function Login() {
             <Button variant="contained"
                 disabled={!selectedTeamId || !createUsername || !createPassword || !createCode}
                 onClick={() => handleCreateAccount()}
-                sx={{ backgroundColor: '#14083d' }}>Create Account</Button>
+                sx={{ backgroundColor: '#14083d' }}>Claim Account</Button>
+            
+            <span>Can't select a team? Refresh the page!</span>
+            
             
             <span onClick={() => setCreateAccount(false)} style={{ color: '#14083d', cursor: 'pointer' }}>Login</span>
 
@@ -124,7 +127,7 @@ export default function Login() {
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
             {/* create account link */}
-            <span onClick={() => setCreateAccount(true)} style={{ color: '#14083d', cursor: 'pointer' }}>Create Account</span>   
+            <span onClick={() => setCreateAccount(true)} style={{ color: '#14083d', cursor: 'pointer' }}>Claim Account</span>   
         </div>}
     </>);
 }

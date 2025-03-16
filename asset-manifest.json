@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/PlayBook/static/css/main.c53be2b4.css",
-    "main.js": "/PlayBook/static/js/main.0c2c7906.js",
+    "main.js": "/PlayBook/static/js/main.bab0e57d.js",
     "index.html": "/PlayBook/index.html",
     "main.c53be2b4.css.map": "/PlayBook/static/css/main.c53be2b4.css.map",
-    "main.0c2c7906.js.map": "/PlayBook/static/js/main.0c2c7906.js.map"
+    "main.bab0e57d.js.map": "/PlayBook/static/js/main.bab0e57d.js.map"
   },
   "entrypoints": [
     "static/css/main.c53be2b4.css",
-    "static/js/main.0c2c7906.js"
+    "static/js/main.bab0e57d.js"
   ]
 }
